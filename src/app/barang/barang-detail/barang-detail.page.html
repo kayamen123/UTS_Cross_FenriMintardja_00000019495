@@ -1,0 +1,147 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ loadedBarang.title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/barang"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="presentModal()">
+        <ion-icon name="hammer-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button (click)="presentAlert()"><ion-icon name="trash-outline" slot="icon-only"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadedBarang.jenis_barang === 'CPU'">
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-img [src]="loadedBarang.imageUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{ loadedBarang.title }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+           Harga Barang: {{ loadedBarang.harga| currency:"Rp "}}
+          </ion-item>
+          <ion-item>
+            Merek: {{ loadedBarang.merek }}
+          </ion-item>
+          <ion-item>
+            Base Clock: {{ loadedBarang.base_clock }}
+          </ion-item>
+          <ion-item>
+            Boost Clock: {{ loadedBarang.boost_clock }}
+          </ion-item>
+          <ion-item>
+            Jumlah Core: {{ loadedBarang.jumlah_core }}
+          </ion-item>
+          <ion-item>
+            Stock Barang: {{ loadedBarang.stock }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="loadedBarang.jenis_barang === 'RAM'">
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-img [src]="loadedBarang.imageUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{ loadedBarang.title }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+           Harga Barang: {{ loadedBarang.harga| currency:"Rp "}}
+          </ion-item>
+          <ion-item>
+            Merek: {{ loadedBarang.merek }}
+          </ion-item>
+          <ion-item>
+            Speed: {{ loadedBarang.speed }}
+          </ion-item>
+          <ion-item>
+            Ukuran: {{ loadedBarang.ukuran }}
+          </ion-item>
+          <ion-item>
+            Stock Barang: {{ loadedBarang.stock }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="loadedBarang.jenis_barang === 'Motherboard'">
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-img [src]="loadedBarang.imageUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{ loadedBarang.title }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+           Harga Barang: {{ loadedBarang.harga| currency:"Rp "}}
+          </ion-item>
+          <ion-item>
+            Merek: {{ loadedBarang.merek }}
+          </ion-item>
+          <ion-item>
+            Chipset: {{ loadedBarang.chipset }}
+          </ion-item>
+          <ion-item>
+            Ditunjukkan untuk procesor: {{ loadedBarang.for_procesor }}
+          </ion-item>
+          <ion-item>
+            Stock Barang: {{ loadedBarang.stock }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="loadedBarang.jenis_barang === 'GPU'">
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-img [src]="loadedBarang.imageUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{ loadedBarang.title }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+           Harga Barang: {{ loadedBarang.harga| currency:"Rp "}}
+          </ion-item>
+          <ion-item>
+            Merek: {{ loadedBarang.merek }}
+          </ion-item>
+          <ion-item>
+            Stock Barang: {{ loadedBarang.stock }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="back()"><ion-icon name="list-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        <ion-buttons slot="start">
+      <ion-menu-button menu="barangsMenu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let barang of barangs" [routerLink]="['./', barang.id]">
+        <ion-card >
+          <ion-card-header>
+            <ion-img  [src]="barang.imageUrl"></ion-img>
+            <ion-item>
+              <ion-title>
+                {{ barang.title }}
+              </ion-title>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+                <ion-grid>
+                  <ion-row>
+                    <ion-label>{{ barang.harga | currency:"Rp "}}&nbsp;&nbsp;</ion-label>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+              <ion-item>
+                <ion-grid>
+                  <ion-row>
+                    <ion-label>{{ barang.stock }}&nbsp;&nbsp;</ion-label>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>     
+
+</ion-content>

@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tambah Barang</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content *ngIf="pilih_barang === 'CPU'">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nama Barang</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Merek</ion-label>
+        <ion-input formControlName="merek" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Base Clock</ion-label>
+        <ion-input formControlName="bclock" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Boost Clock</ion-label>
+        <ion-input formControlName="boclock" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Jumlah Core</ion-label>
+        <ion-input formControlName="jcore" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Harga</ion-label>
+        <ion-input formControlName="harga" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stock</ion-label>
+        <ion-input formControlName="stock" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input formControlName="imageUrl" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onCreate()" type="submit">Tambah Barang</ion-button>
+  </form>
+</ion-content>
+
+<ion-content *ngIf="pilih_barang === 'RAM'">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nama Barang</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Merek</ion-label>
+        <ion-input formControlName="merek" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Speed</ion-label>
+        <ion-input formControlName="speed" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ukuran</ion-label>
+        <ion-input formControlName="ukuran" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Harga</ion-label>
+        <ion-input formControlName="harga" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stock</ion-label>
+        <ion-input formControlName="stock" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input formControlName="imageUrl" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onCreate()" type="submit">Tambah Barang</ion-button>
+  </form>
+</ion-content>
+
+<ion-content *ngIf="pilih_barang === 'Motherboard'">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nama Barang</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Merek</ion-label>
+        <ion-input formControlName="merek" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Chipset</ion-label>
+        <ion-input formControlName="chipset" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ditunjukkan untuk procesor</ion-label>
+        <ion-input formControlName="procesor" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Harga</ion-label>
+        <ion-input formControlName="harga" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stock</ion-label>
+        <ion-input formControlName="stock" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input formControlName="imageUrl" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onCreate()" type="submit">Tambah Barang</ion-button>
+  </form>
+</ion-content>
+
+<ion-content *ngIf="pilih_barang === 'GPU'">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nama Barang</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Merek</ion-label>
+        <ion-input formControlName="merek" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Harga</ion-label>
+        <ion-input formControlName="harga" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stock</ion-label>
+        <ion-input formControlName="stock" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input formControlName="imageUrl" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onCreate()" type="submit">Tambah Barang</ion-button>
+  </form>
+</ion-content>
+
+
+
+
