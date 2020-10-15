@@ -19,11 +19,16 @@ const routes: Routes = [
   {
     path: 'add-barang-jenis',
     loadChildren: () => import('./add-barang-jenis/add-barang-jenis.module').then( m => m.AddBarangJenisPageModule)
+  },  
+  {
+    path: 'barang-home',
+    loadChildren: () => import('./barang-home/barang-home.module').then( m => m.BarangHomePageModule)
   },
   {
     path: ':barangId',
     loadChildren: () => import('./barang-detail/barang-detail.module').then( m => m.BarangDetailPageModule)
-  }
+  },
+
 
 
 ];
